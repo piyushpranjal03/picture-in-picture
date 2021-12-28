@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Sora", sans-serif;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.18' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+button {
+  min-height: 5rem;
+  min-width: 14rem;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  border: none;
+  border-radius: 15rem;
+
+  cursor: pointer;
+  outline: none;
+}
+
+button:last-child {
+  margin-left: 1.5rem;
+}
+
+.capture {
+  color: white;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+.start {
+  color: white;
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+.stop {
+  color: white;
+  background-image: linear-gradient(to top, #ff0844 0%, #f37954 100%);
+}
+
+.capture:hover {
+  box-shadow: 0 0 10px 5px rgb(37, 117, 252, 0.3);
+}
+.start:hover {
+  box-shadow: 0 0 10px 5px rgba(18, 129, 94, 0.3);
+  cursor: not-allowed;
+}
+.stop:hover {
+  box-shadow: 0 0 10px 5px rgba(255, 8, 68, 0.3);
+}
+
+.start:hover,
+.capture:hover,
+.stop:hover {
+  letter-spacing: 4px;
+  transition: letter-spacing 200ms ease-in-out;
+}
+
+/* Small Screens Styling */
+@media screen and (max-width: 1000px) {
+  button {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  button:last-child {
+    margin-left: 0;
+  }
+}
